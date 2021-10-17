@@ -1,15 +1,23 @@
 let nextPlayer = 'X'; // takes a value of either 'X' or 'O' according to the game turns
 
 //initialize the game
-
+var initializeGame= document.createElement('button')
 // use the value stored in the nextPlayer variable to indicate who the next player is
-
-
+initializeGame.innerText='Click here to start a new game';
+document.getElementById('game-over-lbl').appendChild(initializeGame);
+initializeGame.addEventListener('click',(initialEvent)=>{initialEvent.target.hidden=true;});
 //This call will create the buttons needed for the gameboard.
+let playerInd= document.querySelector('2')
+let playerTxt= 'Next player!';
+playerInd.innerText= playerTxt
 createGameBoard()
 
 function createGameBoard()
-{
+{   for(let i =0; i<9;i++){
+        let cell='c'+(i+1);
+        var button=document.createElement('button');
+        document.getElementById(cell).appendChild(button);
+}
     // Programatically add a button with square brackets enclosing an empty space to each cell in the gameboard
    
 }
@@ -23,7 +31,7 @@ for (let i=0; i<btns.length; i++)
 
 // This function will be used to respond to a click event on any of the board buttons.
 function takeCell(event)
-{
+{   
     /*
         When the button is clicked, the space inside its square brackets is replaced by the value in the nextPlayer before switching it
     */
@@ -33,6 +41,10 @@ function takeCell(event)
     // Check if the game is over
     if (isGameOver())
     {
+        let gameOver=document.getElementById('game-over-lbl');
+        var newHead= document.createElement('h1');
+        newHead.innerText('Game Over');
+        gameOver.appendChild(newHead);
         // let the lable with the id 'game-over-lbl' display the words 'Game Over' inside <h1> element
     }
 
@@ -40,7 +52,13 @@ function takeCell(event)
 }
 
 function isGameOver()
-{
+{   let used=true;
+    for(let i = 0; i<button.length; i++){
+        if(!button[i].disabled){
+            used=false;
+        }
+    }
+    return true;
     // This function returns true if all the buttons are disabled and false otherwise 
    
 }
