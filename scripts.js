@@ -13,7 +13,15 @@ playerInd.innerText= playerTxt
 createGameBoard()
 
 function createGameBoard()
-{   for(let i =0; i<9;i++){
+{   let boardArray= [' ',' ',' ',' ',' ',' ',' ',' ',' '];
+    const gameBoard= document.querySelectorAll('#board');
+    const cells= Array.from(document.querySelectorAll('.cell'));
+    const render= ()=>{
+        boardArray.forEach((mark,inx)=>{
+            cells[idx].textContent= boardArray[idx];
+        });
+    };
+      for(let i =0; i<9;i++){
         let cell='c'+(i+1);
         var button=document.createElement('button');
         document.getElementById(cell).appendChild(button);
