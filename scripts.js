@@ -11,7 +11,7 @@ let playerID= document.querySelector('next-lbl');
 playerID.innerText='X'
 var table = document.getElementsByTagName('td');
 var button = document.createElement('button');
-table.addEventListener('click',(initialEvent)=>{initialEvent.target.playerID=true;})
+table.addEventListener('click',(initialEvent)=>{initialEvent.target.nextPlayer=true;})
 createGameBoard()
 
 function createGameBoard(){
