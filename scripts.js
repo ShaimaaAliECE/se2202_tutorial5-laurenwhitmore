@@ -6,7 +6,7 @@ initializeGame.innerText='Click here to start a new game';
 document.getElementById('game-over-lbl').appendChild(initializeGame);
 initializeGame.addEventListener('click',(initialEvent)=>{initialEvent.target.hidden=true;});
 //This call will create the buttons needed for the gameboard.
-document.getElementById('next-lbl').innerHTML=nextPlayer;
+document.getElementById('next-lbl').innerHTML=nextPlayer.target;
 //makes the next player declaration
 createGameBoard()
 
