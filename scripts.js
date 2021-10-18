@@ -14,7 +14,7 @@ var button = document.createElement('button');
 createGameBoard()
 
 function createGameBoard(){
-for(let i =1; i<10; i++){
+for(let i =0; i<9; i++){
     table[i].innerHTML="<button>[ ]</button>";
     
 }
@@ -32,12 +32,7 @@ for (let i=0; i<btns.length; i++)
 
 // This function will be used to respond to a click event on any of the board buttons.
 function takeCell(event)
-{   player2= false;
-    function playerChange(){
-        nextPlayer==nextPlayer==="X"?"O":"X";
-        statusDisplay.innerText= currentPlayerTurn();
-
-    }
+{   
     /*  
         When the button is clicked, the space inside its square brackets is replaced by the value in the nextPlayer before switching it
     */
