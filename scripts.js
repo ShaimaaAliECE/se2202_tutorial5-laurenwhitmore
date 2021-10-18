@@ -3,6 +3,7 @@ let nextPlayer = 'X'; // takes a value of either 'X' or 'O' according to the gam
 var initializeGame= document.createElement('button')
 // use the value stored in the nextPlayer variable to indicate who the next player is
 initializeGame.innerText='Click here to start a new game';
+document.getElementById('game-over-lbl').appendChild(initializeGame);
 initializeGame.addEventListener('click',(initialEvent)=>{initialEvent.target.hidden=true;});
 //This call will create the buttons needed for the gameboard.
 
