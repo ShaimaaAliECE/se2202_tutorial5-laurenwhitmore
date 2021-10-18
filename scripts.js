@@ -11,12 +11,13 @@ let playerID= document.querySelector('next-lbl');
 playerID.innerText='X'
 var table = document.getElementsByTagName('td');
 var button = document.createElement('button');
+table.addEventListener('click',(initialEvent)=>{initialEvent.target.playerID=true;})
 createGameBoard()
 
 function createGameBoard(){
 for(let i =0; i<9; i++){
     table[i].innerHTML="<button>[ ]</button>";
-    
+    document.getElementById('c'+(i+1)).appendChild(table); 
 }
 }
 
