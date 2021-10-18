@@ -9,13 +9,14 @@ initializeGame.addEventListener('click',(initialEvent)=>{initialEvent.target.hid
 
 let playerID= document.querySelector('next-lbl');
 playerID.innerText='X'
+var table = document.getElementsByTagName('td');
+var button = document.createElement('button');
 createGameBoard()
 
 function createGameBoard(){
 for(let i =1; i<10; i++){
-    let cellID= 'c'+i;
-    var btn= document.createElement('button');
-    document.getElementById(cellID).appendChild(btn);
+    table[i].innerHTML="<button>[ ]</button>";
+    
 }
 }
 
