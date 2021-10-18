@@ -1,24 +1,20 @@
 let nextPlayer = 'X'; // takes a value of either 'X' or 'O' according to the game turns
-let boardArray= [' ',' ',' ',' ',' ',' ',' ',' ',' '];
 //initialize the game
 var initializeGame= document.createElement('button')
 // use the value stored in the nextPlayer variable to indicate who the next player is
 initializeGame.innerText='Click here to start a new game';
-// document.getElementById('game-over-lbl').appendChild(initializeGame);
-// var currentPlayerTurn = document.getElementById('next-lbl');
-// initializeGame.addEventListener('click',(initialEvent)=>{initialEvent.target.hidden=true;});
+initializeGame.addEventListener('click',(initialEvent)=>{initialEvent.target.hidden=true;});
 //This call will create the buttons needed for the gameboard.
 
-let playerInd= document.querySelector('2')
-let playerTxt= 'Next player!';
-playerInd.innerText= playerTxt
 createGameBoard()
 
-function createGameBoard()
-for(let i =0; i<9; i++){
-    boardArray[i].document.createElement('button')
+function createGameBoard(){
+for(let i =1; i<10; i++){
+    let cellID= 'c'+i;
+    var btn= document.createElement('button');
+    document.getElementById(cellID).appendChild(btn);
 }
-
+}
 
     // Programatically add a button with square brackets enclosing an empty space to each cell in the gameboard
    
