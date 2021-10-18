@@ -4,9 +4,9 @@ let boardArray= [' ',' ',' ',' ',' ',' ',' ',' ',' '];
 var initializeGame= document.createElement('button')
 // use the value stored in the nextPlayer variable to indicate who the next player is
 initializeGame.innerText='Click here to start a new game';
-document.getElementById('game-over-lbl').appendChild(initializeGame);
-var currentPlayerTurn =document.getElementById('next-lbl');
-initializeGame.addEventListener('click',(initialEvent)=>{initialEvent.target.hidden=true;});
+// document.getElementById('game-over-lbl').appendChild(initializeGame);
+// var currentPlayerTurn = document.getElementById('next-lbl');
+// initializeGame.addEventListener('click',(initialEvent)=>{initialEvent.target.hidden=true;});
 //This call will create the buttons needed for the gameboard.
 
 let playerInd= document.querySelector('2')
@@ -15,10 +15,13 @@ playerInd.innerText= playerTxt
 createGameBoard()
 
 function createGameBoard()
-{   var buttons
+for(let i =0; i<9; i++){
+    boardArray[i].document.createElement('button')
+}
+
+
     // Programatically add a button with square brackets enclosing an empty space to each cell in the gameboard
    
-}
 
 // Programatically add 'takeCell' as an event listener to all the buttons on the board
 let btns = document.querySelectorAll('button');
