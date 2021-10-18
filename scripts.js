@@ -7,6 +7,8 @@ document.getElementById('game-over-lbl').appendChild(initializeGame);
 initializeGame.addEventListener('click',(initialEvent)=>{initialEvent.target.hidden=true;});
 //This call will create the buttons needed for the gameboard.
 
+let playerID= document.querySelector('next-lbl');
+playerID.innerText='X'
 createGameBoard()
 
 function createGameBoard(){
