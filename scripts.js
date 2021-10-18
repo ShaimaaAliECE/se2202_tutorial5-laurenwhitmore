@@ -6,7 +6,7 @@ initializeGame.innerText='Click here to start a new game';
 document.getElementById('game-over-lbl').appendChild(initializeGame);
 initializeGame.addEventListener('click',(initialEvent)=>{initialEvent.target.hidden=true;});
 //This call will create the buttons needed for the gameboard.
-document.getElementById('next-lbl').innerHTML=nextPlayer.target;
+document.getElementById('next-lbl').innerHTML=nextPlayer;
 //makes the next player declaration
 createGameBoard()
 
@@ -37,7 +37,7 @@ function takeCell(event)
     }else{
         nextPlayer='X'
     }
-    document.getElementsByTagName('next-lbl').innerHTML=nextPlayer;
+    document.getElementsById("next-lbl").innerHTML=nextPlayer;
     r.disabled=true;
     /*  
         When the button is clicked, the space inside its square brackets is replaced by the value in the nextPlayer before switching it
