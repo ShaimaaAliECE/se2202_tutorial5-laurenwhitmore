@@ -1,10 +1,8 @@
 let nextPlayer = 'X'; // takes a value of either 'X' or 'O' according to the game turns
 //initialize the game
-var initializeGame= document.createElement('button')
+
 // use the value stored in the nextPlayer variable to indicate who the next player is
-initializeGame.innerText='Click here to start a new game';
-document.getElementById('game-over-lbl').appendChild(initializeGame);
-initializeGame.addEventListener('click',(initialEvent)=>{initialEvent.target.hidden=true;});
+
 //This call will create the buttons needed for the gameboard.
 document.getElementById('next-lbl').innerHTML=nextPlayer;
 //makes the next player declaration
@@ -37,7 +35,7 @@ function takeCell(event)
     }else{
         nextPlayer='X'
     }
-    document.getElementsById("next-lbl").innerHTML=nextPlayer;
+    document.getElementById("next-lbl").innerHTML=nextPlayer;
     r.disabled=true;
     /*  
         When the button is clicked, the space inside its square brackets is replaced by the value in the nextPlayer before switching it
